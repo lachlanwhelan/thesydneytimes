@@ -51,15 +51,15 @@ const setMarket = async () => {
 const setWeather = async () => {
     const weatherRow = document.querySelector(".weather-row");
 
-    const coordResponse = await fetch("http://ip-api.com/json/");
+    const coordResponse = await fetch(`https://ipapi.co/json/`);
     const coords = await coordResponse.json();
-    const {lat, lon} = coords;
+    const {latitude, longitude} = coords;
 
-    const weatherResponse = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${weatherKey}&units=metric`);
+    const weatherResponse = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${weatherKey}&units=metric`);
     const weatherData = await weatherResponse.json();
     const {main, weather} = weatherData;
     //http://openweathermap.org/img/wn/10d@2x.png
-    console.log(main, weather);
+   // console.log(main, weather);
 
     const html = `
         <p title="Today's Weather: ${main.temp.toFixed(0)}°C and ${weather[0].main}"><img class="weather-icon" src="http://openweathermap.org/img/wn/${weather[0].icon}.png"/></p>
