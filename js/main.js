@@ -16,7 +16,7 @@ const setMarket = async () => {
 
     //marketRow.innerHTML = `<p class="stock-item">All Ords +1.03%</p>`
     //MAX 100 requests per day
-/*
+
         //yahoo finance api
     const stockResponse = await fetch(`https://yfapi.net/v6/finance/quote?region=US&lang=en&symbols=%5EAORD%2C%5EAXJO%2CAUDUSD%3DX%2CBTC-AUD`,{
         method: "GET",
@@ -44,7 +44,7 @@ const setMarket = async () => {
             
         }, 3000);
     }
-*/
+
 };
 
 
