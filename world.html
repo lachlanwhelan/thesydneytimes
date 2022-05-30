@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Sydney Times - Breaking News, Australia News, World News</title>
+    <!--<base href="https://lachlanwhelan.github.io/thesydneytimes/"/>-->
+    <link type="image/png" rel="icon" href=""/>
+    <link type="text/css" rel="stylesheet" href="/thesydneytimes/css/reset.css" />
+    <link  type="text/css" rel="stylesheet" href="/thesydneytimes/css/shared.css"/>
+</head>
+<body>
+    <header class="page-header">
+
+        <div class="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <section class="top-header">
+            <div class="date-box"></div>
+            <div class="logo-image"><img src="/thesydneytimes/images/sydneytimeslogo.png"/></div>
+            <div class="weather-market-box">
+                <div class="weather-row"></div>
+                <div class="market-row"></div>
+            </div>
+        </section>
+
+        <nav class="navbar">
+
+            <form class="search-form" method="GET" action=".">
+                <input type="search" placeholder="SEARCH"/>
+                <button type="submit">GO</button>
+            </form>
+
+            <ul class="nav-menu">
+                <li><a class="menu-item" href="world.html">World</a></li>
+                <li><a class="menu-item" href="politics.html">Politics</a></li>
+                <li><a class="menu-item" href="business.html">Business</a></li>
+                <li><a class="menu-item" href="technology.html">Technology</a></li>
+                <li><a class="menu-item" href="health.html">Health</a></li>
+                <li><a class="menu-item" href="sports.html">Sports</a></li>
+                <li><a class="menu-item" href="arts.html">Arts</a></li>
+                <li><a class="menu-item" href="books.html">Books</a></li>
+                <li><a class="menu-item" href="food.html">Food</a></li>
+                <li><a class="menu-item" href="travel.html">Travel</a></li>
+                <li><a class="menu-item" href="fashion.html">Fashion</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main class="root">
+        <h1 class="category-title">World</h1>
+        <div class="news-container">
+            <div class="news-feed">
+                <div class="main-feed"></div>
+                <div class="side-feed"></div>
+            </div>
+        </div>
+    </main>
+
+
+
+    <footer>
+            <div class="logo-img"><img src="./images/sydneytimeslogo.png"/></div>
+    
+            <a class="attribution-img" href="https://developer.nytimes.com/"><img src="https://developer.nytimes.com/files/poweredby_nytimes_200a.png?v=1583354208344"/></a>
+    </footer>
+    
+
+    <script type="module" src="./js/main.js"></script>
+    <script type="module">
+        import {setTopStories} from "./js/main.js";
+
+        setTopStories("world");
+    </script>
+</body>
+</html>

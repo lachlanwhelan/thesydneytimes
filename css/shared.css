@@ -1,8 +1,485 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@800&family=Roboto+Flex:opsz@8..144&display=swap');
+
 body{
     max-width: 1200px;
     margin: auto;
+    font-family: 'Roboto Flex', sans-serif;
+}
+
+a{
+    font-family: 'Roboto Flex', sans-serif;
+    display: block;
+    color:rgb(29, 29, 29);
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Playfair Display', serif;
 }
 
 img{
     width: 100%;
+}
+
+.navbar{
+    display: none;
+    padding: 0 25px;
+}
+
+.nav-toggle{
+    display: block;
+    width:15px;
+    height: 10px;
+    position: absolute;
+    top: 22px;
+    right: 15px;
+    cursor: pointer;
+}
+
+.nav-toggle span{
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: black;
+    position: absolute;
+}
+
+.nav-toggle span:first{
+    top: 0;
+}
+
+.nav-toggle span:nth-child(2){
+    top: 4px;
+}
+
+.nav-toggle span:last-child{
+    bottom: 0;
+}
+
+.top-header{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+.logo-image{
+    max-width: 200px;
+    padding: 15px 0 10px 0;
+}
+
+.weather-market-box{
+    display: none;
+}
+
+.date-box{
+    padding: 5px;
+    background-color: rgb(240, 240, 240);
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid #d0d0d0;
+    border-bottom: 1px solid #d0d0d0;
+    font-size: 0.75rem;
+}
+
+.todays-paper{
+    margin-top: 5px;
+}
+
+.search-form{
+    display: flex;
+    justify-content: center;
+    margin: 15px 0;
+}
+
+.search-form input, .search-form button{
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(197, 197, 197);
+}
+
+.search-form input{
+    color: grey;
+    margin-right: 10px;
+    width: 100%;
+    outline: none;
+}
+
+.menu-item{
+ display: block;
+ padding: 15px 0;
+ padding-left: 10px;
+ color: rgb(29, 29, 29);
+ transition: 0.2s ease;
+}
+
+.menu-item:hover{
+    background-color: rgb(240, 240, 240);
+}
+
+.toggle-on .navbar{
+    display: block;
+}
+
+.toggle-on .nav-toggle{
+    left: auto;
+    right: 15px;
+}
+
+.toggle-on .nav-toggle span:first-child{
+     transform: rotate(35deg);
+     transform-origin: left;
+}
+
+.toggle-on .nav-toggle span:nth-child(2){
+    display: none;
+}
+
+.toggle-on .nav-toggle span:last-child{
+    transform: rotate(-35deg);
+    transform-origin: left;
+}
+
+
+.article-category{
+    text-transform: capitalize;
+}
+
+.article-title{
+    margin: 5px 0   ;
+}
+
+.article-author{
+    font-size: 14px;
+}
+
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 50px;
+    align-items: center;
+}
+
+footer .logo-img{
+    max-width: 200px;
+    margin: 10px 0;
+}
+
+.attribution-img {
+    max-width: 200px;
+    margin: 10px 0;
+}
+
+.root{
+    padding: 10px;
+}
+
+.news-article{
+    border-bottom: 1.5px solid rgb(230, 230, 230);
+    margin: 10px;
+}
+
+
+.news-article-title, 
+.news-article-img, 
+.news-article-details, 
+.news-article-author,
+.news-article-category{
+    margin-bottom: 15px;
+}
+
+.news-article-details, 
+.news-article-img-copyright{
+    color: rgb(85, 85, 85);
+}
+
+.news-article-details{
+    line-height: 25px;
+}
+
+.news-article-img-copyright{
+    font-size: 8px;
+    text-align: right;
+}
+
+.top-five .news-article{
+    color: white;
+    min-height: 40vh;
+    padding: 10px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.top-five .news-article-category{
+    text-transform: uppercase;
+}
+
+.top-five .news-article-text{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-color: #2626268a;
+    padding: 10px;
+}
+
+ 
+.main-feed .news-article-category{
+    display: none;
+}
+
+.category-title{
+    padding: 20px;
+}
+
+@media only screen and (min-width: 1024px) {
+
+    .page-header, .root{
+        padding: 0 30px;
+    }
+
+    .top-header{
+        flex-direction: row;
+        justify-content: space-between;
+        
+    }
+
+    .date-box{
+        width: auto;
+        background-color: transparent;
+        border: none;
+        text-align: left;
+    }
+    
+    .date-text{
+        font-weight: bold;
+    }
+
+    .weather-market-box{
+        display: block;
+    }
+
+    .weather-row, .market-row{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 62px;
+        font-size: 0.75rem;
+    }
+
+    .market-row{
+       justify-content: flex-end;
+       font-size: 0.65rem;
+       width: 125px;
+    }
+
+    .market-row p{
+        animation: fadeIn 0.5s ease 1;
+    }
+
+    .market-row p:first-child{
+        margin-right: 10px;
+    }
+
+    .stock-up{
+        color: green;
+    }
+    .stock-down{
+        color: red;
+    }
+
+    .weather-row .temp{
+        margin-right: 5px;
+    }
+
+    .weather-row p:last-child{
+        color: grey;
+    }
+
+    .weather-icon{
+        width:35px;
+    }
+
+    .weather-temp{
+        font-weight: bold;
+    }
+
+    .nav-toggle{
+        display: none;
+    }
+
+    .logo-image{
+        max-width: 450px;
+        padding-top: 20px;
+    }
+
+    .navbar{
+        display: block;
+        padding: 0;
+    }
+
+    .search-form{
+        display: none;
+    }
+
+    .nav-menu{
+        display: flex;
+        justify-content: center;
+        padding: 5px 0;
+        border-top: 1px solid rgb(206, 206, 206);
+        border-bottom: 1px solid black;
+        margin-bottom: 2px;
+    }
+
+    .navbar::after{
+        content: "";
+        display: block;
+        border-bottom: 1px double #000;
+    }
+
+    .menu-item{
+        padding: 5px 15px;
+        font-size: 0.75rem;
+    }
+
+    
+    .root{
+        padding: 0;
+    }
+
+    .top-five{
+        padding-bottom: 20px;
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        min-height: 80vh;
+    }
+
+    .top-five .news-article{
+        margin: 10px;
+        min-height: auto;
+    }
+
+    .top-five .news-article .news-article-text:hover{
+        transition: 0.2s ease;
+        background-color: rgba(128, 128, 128, 0.524);
+    }
+
+    .top-five .news-article .news-article-category{
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+
+    .top-five .news-article .news-article-title{
+        font-size: 25px;
+        max-width: 500px;
+    }
+
+    .top-five .article-1{
+        grid-column: 1/3;
+        grid-row: 1/3;
+    }
+
+    .top-five .article-5{
+        grid-row: 2/4;
+    }
+
+    .news-feed{
+        display: flex;
+        border-top: 1px solid rgb(201, 201, 201);
+        border-bottom: 1px solid rgb(201, 201, 201);
+    }
+
+    .news-feed .news-article:hover h3{
+        color: rgb(85, 85, 85);
+    }
+
+    .main-feed, 
+    .side-feed{
+        padding-top: 15px;
+    }
+
+    .main-feed .news-article,
+    .side-feed .news-article{
+        padding: 15px;
+    }
+
+    .main-feed{
+        width: 75%;
+        border-right: 1px solid rgb(201, 201, 201);
+    }
+
+    .side-feed{
+        width: 25%
+    }
+
+    .bar-template-article{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+
+    .bar-template-article .news-article-category{
+        display: block;
+        text-transform: uppercase;
+        color: rgb(85, 85, 85);
+    }
+
+    .bar-template-article .news-article-img{
+        max-width: 300px;
+        margin-right: 20px;
+    }
+
+    .bar-template-article:last-child{
+        border: none;
+    }   
+
+    .strip-template-article .news-article-img{
+        display: none;
+    }
+
+    .category-title{
+        padding: 50px 20px;
+        font-size: 35px;
+    }
+}
+
+@media only screen and (min-width: 1200px){
+    .bar-template-article{
+        margin-right: 20px;
+    }
+
+    .bar-template-article .news-article-title{
+        font-size: 30px;
+    }
+}
+
+
+
+@media only screen and (min-width: 1400px) {
+
+    .page-header, .root{
+        padding: 0;
+    }
+    .logo-image{
+        max-width: 400px;
+        padding-top: 30px;
+    }
+}
+
+
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
 }
