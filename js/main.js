@@ -72,7 +72,7 @@ const setWeather = async () => {
 };
 
 export const setTopStories = async (category) => {
-    setLoader(true);
+    
     const newsResponse = await fetch(`https://api.nytimes.com/svc/topstories/v2/${category}.json?api-key=whQktYGVqJAkSkaELoMuox7bs2sCMYaQ`);
 
     const newsData = await newsResponse.json();

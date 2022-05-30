@@ -175,6 +175,10 @@ footer .logo-img{
     min-height: 100vh;
 }
 
+.news-container{
+    position: relative;
+}
+
 .news-article{
     border-bottom: 1.5px solid rgb(230, 230, 230);
     margin: 10px;
@@ -248,7 +252,6 @@ footer .logo-img{
     background-color: rgb(232, 232, 232);
     visibility: hidden;
     opacity: 0;
-    animation: fadeIn 0.2s ease 1 forwards;
 }
 
 .loader-screen-on{
