@@ -244,8 +244,8 @@ footer .logo-img{
     right: 0;
     top: 0;
     bottom: 0;
-    background-color: rgb(195, 195, 195);
-    visibility: visible;
+    background-color: rgb(232, 232, 232);
+    visibility: hidden;
     opacity: 0;
     animation: fadeIn 0.2s ease 1 forwards;
 }
