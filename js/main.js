@@ -72,6 +72,7 @@ const setWeather = async () => {
 };
 
 export const setTopStories = async (category) => {
+    setLoader(true);
     const newsResponse = await fetch(`https://api.nytimes.com/svc/topstories/v2/${category}.json?api-key=whQktYGVqJAkSkaELoMuox7bs2sCMYaQ`);
 
     const newsData = await newsResponse.json();
@@ -79,8 +80,6 @@ export const setTopStories = async (category) => {
     const topFive = document.querySelector(".top-five");
     const mainFeed = document.querySelector(".main-feed");
     const sideFeed = document.querySelector(".side-feed");
-
-    console.log(newsData);
 
     if(category === "home"){
 
@@ -108,9 +107,21 @@ export const setTopStories = async (category) => {
          });
         
     }
+
+    setLoader(false);
 };
 
-export const createArticleTemplate = (article, number, type) => {
+const setLoader = (loadStatus) => {
+    const loadScreen = document.querySelector(".loader-screen");
+    
+    if(loadStatus){
+        loadScreen.classList.add("loader-screen-on");
+    }else{
+        loadScreen.classList.remove("loader-screen-on");
+    }
+}
+
+const createArticleTemplate = (article, number, type) => {
 
 
     if(type === "TOPFIVE"){

@@ -171,6 +171,7 @@ footer .logo-img{
 
 .root{
     padding: 10px;
+    position: relative;
 }
 
 .news-article{
@@ -236,6 +237,23 @@ footer .logo-img{
     padding: 20px;
 }
 
+
+.loader-screen{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgb(195, 195, 195);
+    visibility: visible;
+    opacity: 0;
+    animation: fadeIn 0.2s ease 1 forwards;
+}
+
+.loader-screen-on{
+    visibility: visible;
+    opacity: 1;
+}
 @media only screen and (min-width: 1024px) {
 
     .page-header, .root{
