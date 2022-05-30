@@ -177,6 +177,7 @@ footer .logo-img{
 
 .news-container{
     position: relative;
+    min-height: 100vh;
 }
 
 .news-article{
