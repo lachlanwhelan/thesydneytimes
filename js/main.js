@@ -108,7 +108,9 @@ export const setTopStories = async (category) => {
         
     }
 
-    setLoader(false);
+    setTimeout(() => {
+        setLoader(false);
+    }, 3000);
 };
 
 const setLoader = (loadStatus) => {
