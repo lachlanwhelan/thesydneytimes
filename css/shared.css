@@ -4,7 +4,7 @@ body{
     max-width: 1200px;
     margin: auto;
     font-family: 'Roboto Flex', sans-serif;
-    animation: fadeIn ease 1s 1 forwards;
+    animation: fadeIn ease 3s 1 forwards;
 }
 
 a{
@@ -251,7 +251,7 @@ footer .logo-img{
     right: 0;
     top: 0;
     bottom: 0;
-    background-color: rgb(232, 232, 232);
+    background-color: rgb(255, 255, 255);
     visibility: hidden;
     opacity: 0;
 }
