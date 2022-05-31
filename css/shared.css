@@ -4,6 +4,7 @@ body{
     max-width: 1200px;
     margin: auto;
     font-family: 'Roboto Flex', sans-serif;
+    animation: fadeIn ease 1s 1 forwards;
 }
 
 a{
