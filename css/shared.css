@@ -279,11 +279,11 @@ footer .logo-img{
 }
 
 .loader span:nth-child(2){
-    animation-delay: 1s;
+    animation-duration: 1.2s;
 }
 
 .loader span:last-child{
-    animation-delay: 2s;
+    animation-duration: 1.4s;
 }
 
 @media only screen and (min-width: 1024px) {
