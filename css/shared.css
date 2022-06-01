@@ -63,7 +63,7 @@ img{
 }
 
 .logo-image{
-    max-width: 200px;
+    max-width: 310px;
     padding: 15px 0 10px 0;
 }
 
@@ -493,7 +493,7 @@ footer .logo-img{
         padding: 0;
     }
     .logo-image{
-        max-width: 400px;
+        max-width: 650px;
         padding-top: 30px;
     }
 }
