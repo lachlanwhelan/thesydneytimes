@@ -266,14 +266,24 @@ footer .logo-img{
 
 .loader{
     display: flex;
+    position: fixed;
+    top: 50%;
 }
 
 .loader span{
     display: block;
     margin: 10px;
     padding: 10px;
-    background-color: rgb(199, 28, 28);
-    animation: rotate 0.2s ease forwards infinite;
+    background-color: rgb(255, 22, 22);
+    animation: rotate 1s ease forwards infinite;
+}
+
+.loader span:nth-child(2){
+    animation-delay: 1s;
+}
+
+.loader span:last-child{
+    animation-delay: 2s;
 }
 
 @media only screen and (min-width: 1024px) {
