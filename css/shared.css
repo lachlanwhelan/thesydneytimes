@@ -1,14 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@800&family=Roboto+Flex:opsz@8..144&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Playfair+Display:wght@800&display=swap');
 
 body{
     max-width: 1200px;
     margin: auto;
-    font-family: 'Roboto Flex', sans-serif;
+    font-family: 'Inter', sans-serif;
     animation: fadeIn ease 3s 1 forwards;
 }
 
 a{
-    font-family: 'Roboto Flex', sans-serif;
+    font-family: 'Inter', sans-serif;
     display: block;
     color:rgb(29, 29, 29);
 }
@@ -315,14 +315,13 @@ footer .logo-img{
 
     .weather-row, .market-row{
         display: flex;
-        justify-content: center;
+        justify-content: flex-end;
         align-items: center;
         min-width: 62px;
         font-size: 0.75rem;
     }
 
     .weather-row{
-       justify-content: flex-end;
        font-size: 0.75rem;
        width: 145px;
     }
