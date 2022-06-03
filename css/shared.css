@@ -57,6 +57,10 @@ img{
     bottom: 0;
 }
 
+.search-toggle{
+    display: none;
+}
+
 .top-header{
     display: flex;
     flex-direction: column-reverse;
@@ -502,6 +506,16 @@ footer .logo-img{
     .category-title{
         padding: 50px 20px;
         font-size: 35px;
+    }
+
+    .search-toggle{
+        padding: 10px;
+        display: flex;
+        border-radius: 50%;
+    }
+
+    .search-toggle img{
+        max-width: 20px;
     }
 }
 
