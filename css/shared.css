@@ -1,14 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Playfair+Display:wght@800&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Playfair+Display:wght@800&display=swap');*/
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@800&family=Roboto+Slab&display=swap');
 
 body{
     max-width: 1200px;
     margin: auto;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Roboto Slab', serif;
     animation: fadeIn ease 3s 1 forwards;
 }
 
 a{
-    font-family: 'Inter', sans-serif;
+    font-family: 'Roboto Slab', serif;
     display: block;
     color:rgb(29, 29, 29);
 }
