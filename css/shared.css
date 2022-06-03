@@ -515,10 +515,17 @@ footer .logo-img{
         border-radius: 50%;
         border: 1px solid #c1c1c1;
         background-color: white;
+        cursor: pointer;
+        transition: 0.2s ease;
+        margin-left: 10px;
+    }
+
+    .search-toggle:hover{
+        background-color: #eeeded;
     }
 
     .search-toggle img{
-        max-width: 15px;
+        max-width: 12px;
     }
 }
 
