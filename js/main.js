@@ -185,10 +185,18 @@ const handleNavToggleClick = () => {
     body.classList.toggle("toggle-on");
 };
 
+const handleSearchToggleClick = () => {
+    const searchForm = document.querySelector(".search-form");
+    searchForm.classList.toggle("search-form-display");
+}
+
 const attachEventHandlers = () => {
+    
     const navToggle = document.querySelector(".nav-toggle");
+    const searchToggle = document.querySelector(".search-toggle");
 
     navToggle.addEventListener("click", handleNavToggleClick);
+    searchToggle.addEventListener("click", handleSearchToggleClick);
 };
 
 

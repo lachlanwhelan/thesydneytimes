@@ -376,6 +376,7 @@ footer .logo-img{
     }
 
     .navbar{
+        position: relative;
         display: block;
         padding: 0;
     }
@@ -526,6 +527,17 @@ footer .logo-img{
 
     .search-toggle img{
         max-width: 12px;
+    }
+
+    .search-form-display{
+        display: flex;
+        position: absolute;
+        top: 50px;
+        z-index: 100;
+        background-color: #e8e8e8;
+        padding: 10px;
+        border-radius: 10px;
+        width: 100%;
     }
 }
 
