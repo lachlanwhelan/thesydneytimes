@@ -4,12 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <title>The Sydney Times - Breaking News, Australia News, World News</title>
     <base href="https://lachlanwhelan.github.io/thesydneytimes/"/>
     <link type="image/png" rel="icon" href="/thesydneytimes/images/favicon.ico"/>
-    <link type="text/css" rel="stylesheet" href="/thesydneytimes/css/reset.css" />
-    <link  type="text/css" rel="stylesheet" href="/thesydneytimes/css/shared.css"/>
+    <link type="text/css" rel="stylesheet" href="./css/reset.css" />
+    <link  type="text/css" rel="stylesheet" href="./css/shared.css"/>
 </head>
 <body>
     <header class="page-header">
@@ -53,38 +52,36 @@
         </nav>
     </header>
 
-
     <main class="root">
-        <h1 class="category-title">Sports</h1>
+        <h1 class="category-title">Search</h1>
         <div class="news-container">
             <div class="news-feed">
                 <div class="main-feed"></div>
-                <div class="side-feed"></div>
             </div>
-            <div class="loader-screen">
-                <div class="loader">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
+        </div>
+
+        <div class="loader-screen">
+            <div class="loader">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </div>
     </main>
 
 
-
-    <footer>
-        <div class="logo-img"><img src="./images/sydneytimeslogo.png"/></div>
-
-        <a class="attribution-img" href="https://developer.nytimes.com/"><img src="https://developer.nytimes.com/files/poweredby_nytimes_200a.png?v=1583354208344"/></a>
-</footer>
-    
-
-    <script type="module" src="./js/main.js"></script>
     <script type="module">
-        import {setTopStories} from "./js/main.js";
+        import {getSearchResults} from "./js/main.js";
+        function receive()
+        {
+            var parameters = location.search.split("=")[1];
+            
 
-        setTopStories("sports");
+            getSearchResults(parameters);
+        }
+
+        window.onload=receive;
+        
     </script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-import { weatherKey, stockKey } from "./config.js";
+import { weatherKey, stockKey, newsKey } from "./config.js";
 
 
 const setDate = async () => {
@@ -73,7 +73,7 @@ const setWeather = async () => {
 
 export const setTopStories = async (category) => {
     setLoader(true);
-    const newsResponse = await fetch(`https://api.nytimes.com/svc/topstories/v2/${category}.json?api-key=whQktYGVqJAkSkaELoMuox7bs2sCMYaQ`);
+    const newsResponse = await fetch(`https://api.nytimes.com/svc/topstories/v2/${category}.json?api-key=${newsKey}`);
 
     const newsData = await newsResponse.json();
 
@@ -167,7 +167,39 @@ const createArticleTemplate = (article, number, type) => {
         </a>
         `;
     }
+
+    if(type === "SEARCH"){
+        return `
+        <a class="news-article bar-template-article" href=${article.web_url}>
+            <div class="news-article-text">
+                <h4 class="news-article-category">${article.subsection_name}</h4>
+                <h3 class="news-article-title">${article.headline.print_headline}</h3>
+                <p class="news-article-details">${article.abstract}</p>
+                <p class="news-article-author">
+                ${article.byline ? article.byline.original : "By Unknown"}
+                </p>
+            </div>
+            <div class="news-article-img"><img src=${article.multimedia[0] ? ("https://www.nytimes.com/" + article.multimedia[0].url) : "./images/image-unavailable.png"}></div>
+        </a>
+        `;
+    }
     
+}
+
+
+export const getSearchResults = async (query) => {
+    
+    const response = await fetch(`https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${query}&api-key=${newsKey}`);
+
+    const results = await response.json();
+
+    const mainFeed = document.querySelector(".main-feed");
+
+    results.response.docs.forEach((article, index) => {
+        console.log(article);
+        mainFeed.innerHTML += createArticleTemplate(article, null, "SEARCH");   
+    });
+
 }
 
 
