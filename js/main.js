@@ -219,7 +219,7 @@ const handleNavToggleClick = () => {
 
 const handleSearchToggleClick = (e) => {
     const searchForm = document.querySelector(".search-form");
-    e.target.classList.toggle("form-open");
+    e.currentTarget.classList.toggle("form-open");
     searchForm.classList.toggle("search-form-display");
 }
 
