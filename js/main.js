@@ -172,8 +172,8 @@ const createArticleTemplate = (article, number, type) => {
         return `
         <a class="news-article bar-template-article" href=${article.web_url}>
             <div class="news-article-text">
-                <h4 class="news-article-category">${article.subsection_name}</h4>
-                <h3 class="news-article-title">${article.headline.print_headline}</h3>
+                <h4 class="news-article-category">${article.section_name}</h4>
+                <h3 class="news-article-title">${article.headline.main}</h3>
                 <p class="news-article-details">${article.abstract}</p>
                 <p class="news-article-author">
                 ${article.byline ? article.byline.original : "By Unknown"}
