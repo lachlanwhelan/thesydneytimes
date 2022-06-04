@@ -217,8 +217,9 @@ const handleNavToggleClick = () => {
     body.classList.toggle("toggle-on");
 };
 
-const handleSearchToggleClick = () => {
+const handleSearchToggleClick = (e) => {
     const searchForm = document.querySelector(".search-form");
+    e.target.classList.toggle("form-open");
     searchForm.classList.toggle("search-form-display");
 }
 

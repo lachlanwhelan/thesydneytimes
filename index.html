@@ -14,14 +14,13 @@
     <header class="page-header">
 
         <div class="nav-toggle">
-            <span></span>
-            <span></span>
-            <span></span>
+            <img class="toggle-open" src="./images/menu.png"/>
+            <img class="toggle-close" src="./images/close.png"/>
         </div>
 
         <section class="top-header">
             <div class="date-box"></div>
-            <a class="logo-image" href="https://lachlanwhelan.github.io/thesydneytimes/"><img src="/thesydneytimes/images/TheSydneyTimes.png"/></a>
+            <a class="logo-image" href="https://lachlanwhelan.github.io/thesydneytimes/"><img src="./images/TheSydneyTimes.png"/></a>
             <div class="weather-market-box">
                 <div class="weather-row"></div>
                 <div class="market-row"></div>
@@ -33,7 +32,7 @@
             <form class="search-form" method="GET" action="./search.html">
                 <span class="form-arrow"></span>
                 <input name="search" type="search" placeholder="SEARCH"/>
-                <button type="submit"><img src="/thesydneytimes/images/search.png"/></button>
+                <button type="submit"><img src="./images/search.png"/></button>
             </form>
 
             <ul class="nav-menu">
@@ -48,7 +47,12 @@
                 <li><a class="menu-item" href="food">Food</a></li>
                 <li><a class="menu-item" href="travel">Travel</a></li>
                 <li><a class="menu-item" href="fashion">Fashion</a></li>
-                <li><button class="search-toggle"><img src="/thesydneytimes/images/search.png"/></button></li>
+                <li>
+                    <button class="search-toggle">
+                        <img class="search-btn" src="./images/search.png"/>
+                        <img class="close-btn" src="./images/close.png"/>
+                    </button>
+                </li>
             </ul>
         </nav>
     </header>

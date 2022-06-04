@@ -30,31 +30,14 @@ img{
 .nav-toggle{
     display: block;
     width:15px;
-    height: 10px;
     position: absolute;
     top: 22px;
     right: 15px;
     cursor: pointer;
 }
 
-.nav-toggle span{
-    display: block;
-    height: 2px;
-    width: 100%;
-    background-color: black;
-    position: absolute;
-}
-
-.nav-toggle span:first{
-    top: 0;
-}
-
-.nav-toggle span:nth-child(2){
-    top: 4px;
-}
-
-.nav-toggle span:last-child{
-    bottom: 0;
+.nav-toggle .toggle-close{
+    display: none;
 }
 
 .search-toggle{
@@ -102,6 +85,10 @@ img{
     border: 1px solid rgb(197, 197, 197);
 }
 
+.search-form button img{
+    width: 12px;
+}
+
 .search-form input{
     color: grey;
     margin-right: 10px;
@@ -110,11 +97,11 @@ img{
 }
 
 .menu-item{
- display: block;
- padding: 15px 0;
- padding-left: 10px;
- color: rgb(29, 29, 29);
- transition: 0.2s ease;
+    display: block;
+    padding: 15px 0;
+    padding-left: 10px;
+    color: rgb(29, 29, 29);
+    transition: 0.2s ease;
 }
 
 .menu-item:hover{
@@ -125,25 +112,13 @@ img{
     display: block;
 }
 
-.toggle-on .nav-toggle{
-    left: auto;
-    right: 15px;
+.toggle-on .toggle-close{
+    display: block;
 }
 
-.toggle-on .nav-toggle span:first-child{
-     transform: rotate(35deg);
-     transform-origin: left;
-}
-
-.toggle-on .nav-toggle span:nth-child(2){
+.toggle-on  .toggle-open{
     display: none;
 }
-
-.toggle-on .nav-toggle span:last-child{
-    transform: rotate(-35deg);
-    transform-origin: left;
-}
-
 
 .article-category{
     text-transform: capitalize;
@@ -525,9 +500,22 @@ footer .logo-img{
         background-color: #eeeded;
     }
 
+    .search-toggle .close-btn{
+        display: none;
+    }
+
+    .search-toggle.form-open .close-btn{
+        display: block;
+    }
+    .search-toggle.form-open .search-btn{
+        display: none;
+    }
+
     .search-toggle img{
         max-width: 12px;
     }
+
+    
 
 
     .search-form button{
