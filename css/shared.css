@@ -537,10 +537,14 @@ footer .logo-img{
         display: flex;
         top: 12px;
     }
+    .search-form button img{
+        width: 12px;
+    }
 
     .search-form input {
         margin-right: 0;
         padding: 15px;
+        border-radius: 0;
       }
 
     .search-form-display{
@@ -552,6 +556,7 @@ footer .logo-img{
         padding: 5px;
         border-radius: 10px;
         width: 100%;
+        border-radius: 0;
     }
 }
 
