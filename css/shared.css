@@ -356,6 +356,16 @@ footer .logo-img{
         padding: 0;
     }
 
+    .scroll .navbar{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        background-color: white;
+        animation: fadeInTop ease 1.5s 1 forwards;
+    }
+
     .search-form{
         display: none;
     }
@@ -590,6 +600,17 @@ footer .logo-img{
     }
     to{
         opacity: 1;
+    }
+}
+
+@keyframes fadeInTop {
+    from{
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 

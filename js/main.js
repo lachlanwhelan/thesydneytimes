@@ -239,6 +239,23 @@ const init = () => {
   setDate();
   setWeather();
   setMarket();
+  
+    window.addEventListener("scroll", function(){
+        const body = document.querySelector("body");
+        
+        setInterval(() => {
+
+            if(this.scrollY > 300){
+
+                body.classList.add("scroll");
+                
+            }else{
+                body.classList.remove("scroll");
+            }
+
+
+        },2000);
+    })
 };
 
 
