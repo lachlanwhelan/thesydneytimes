@@ -14,8 +14,8 @@ The Sydney Times is my re-creation of the New York Times website. The web applic
 - Vanilla JavaScript.
 
 ### APIs
-1. https://developer.nytimes.com/apis
-2. https://ipapi.co/
-3. https://openweathermap.org/api
-4. https://www.yahoofinanceapi.com/
+- https://developer.nytimes.com/apis
+- https://ipapi.co/
+- https://openweathermap.org/api
+- https://www.yahoofinanceapi.com/
 
